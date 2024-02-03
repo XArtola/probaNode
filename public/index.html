@@ -5,9 +5,30 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Landing Page</title>
   <!-- Agrega tus estilos y scripts aquí -->
+  <style>
+    .hidden {
+      display: none;
+    }
+  </style>
 </head>
 <body>
-  <h1>Bienvenido a nuestra Landing Page</h1>
-  <p>Esta es una página simple creada con Node.js y Express.</p>
+  <h1>Demo for puppeteer</h1>
+  
+  <!-- Botón para mostrar el texto -->
+  <button onclick="mostrarTexto()" name="button">Button</button>
+
+  <!-- Área de texto oculta inicialmente -->
+  <p id="textoOculto" class="hidden">You clicked the button</p>
+
+  <script>
+    function mostrarTexto() {
+      // Obtén el elemento de texto oculto
+      var textoOculto = document.getElementById("textoOculto");
+
+      // Muestra el texto cambiando la clase
+      textoOculto.classList.remove("hidden");
+    }
+  </script>
 </body>
 </html>
+
